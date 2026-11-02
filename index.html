@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#34452c">
+  <meta name="description" content="Dapoer Mama Arsy - Aneka makanan dan jajanan rumahan yang lezat dan dibuat dengan cinta.">
+  <title>Dapoer Mama Arsy | Masakan Rumahan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="topbar">
+    ✨ Dibuat dengan cinta, khusus untuk kamu!
+  </div>
+
+  <header class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-icon">🍲</span>
+      <span>Dapoer <b>Mama Arsy</b></span>
+    </a>
+
+    <nav>
+      <a href="#home">Beranda</a>
+      <a href="#menu">Menu</a>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+
+    <button class="cart-button" onclick="scrollToCart()">
+      🛒 <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <span class="eyebrow">❤️ HOMEMADE WITH LOVE</span>
+        <h1>Rasa Rumahan,<br><span>Penuh Kenangan.</span></h1>
+        <p>
+          Selamat datang di Dapoer Mama Arsy!
+          Nikmati aneka makanan dan jajanan rumahan
+          yang lezat, fresh, dan dibuat dengan sepenuh hati.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary">Lihat Menu <span>→</span></a>
+          <a href="#tentang" class="btn-outline">Cerita Kami</a>
+        </div>
+        <div class="hero-note">
+          ⭐ Dibuat fresh &nbsp; • &nbsp; ❤️ Penuh cinta &nbsp; • &nbsp; 🍽️ Harga bersahabat
+        </div>
+      </div>
+
+      <div class="hero-art reveal">
+        <div class="hero-circle"></div>
+        <div class="food-emoji">🍱</div>
+        <div class="floating-card card-one">😋 Enak banget!</div>
+        <div class="floating-card card-two">❤️ Homemade</div>
+        <div class="hero-sticker">Fresh<br>Every Day!</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div>🍃 <span>Bahan pilihan</span></div>
+      <div>👩‍🍳 <span>Buatan rumahan</span></div>
+      <div>💚 <span>Harga bersahabat</span></div>
+      <div>📦 <span>Mudah dipesan</span></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading reveal">
+        <span class="eyebrow">MENU SPESIAL KAMI</span>
+        <h2>Temukan Favoritmu <span>🤤</span></h2>
+        <p>Ada banyak pilihan lezat yang siap menemani harimu.</p>
+      </div>
+
+      <div class="menu-tools">
+        <input type="search" id="search" placeholder="🔍 Cari makanan favoritmu...">
+        <div class="categories" id="categories">
+          <button class="category active" data-category="Semua">Semua</button>
+          <button class="category" data-category="Jajanan">Jajanan</button>
+          <button class="category" data-category="Makanan">Makanan</button>
+          <button class="category" data-category="Dessert">Dessert</button>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menu-grid"></div>
+    </section>
+
+    <section class="promo" id="tentang">
+      <div class="promo-emoji">👩‍🍳</div>
+      <div>
+        <span class="eyebrow">DARI DAPUR KAMI UNTUK KAMU</span>
+        <h2>Masakan sederhana,<br>rasa istimewa!</h2>
+        <p>
+          Dapoer Mama Arsy hadir untuk menyajikan makanan
+          rumahan yang lezat dan bikin rindu. Terima kasih
+          sudah mendukung usaha kecil kami. Setiap pesanan
+          sangat berarti bagi keluarga kami. ❤️
+        </p>
+        <a href="#menu" class="btn-primary">Yuk, Pilih Menu!</a>
+      </div>
+    </section>
+
+    <section class="order-section" id="keranjang">
+      <div class="section-heading">
+        <span class="eyebrow">PESANAN KAMU</span>
+        <h2>Keranjang Belanja 🛒</h2>
+        <p>Periksa pesananmu sebelum dikirim ke WhatsApp.</p>
+      </div>
+
+      <div class="cart-box">
+        <div id="cart-items">
+          <div class="empty-cart">
+            <span>🛍️</span>
+            <p>Keranjang kamu masih kosong.</p>
+            <a href="#menu">Yuk, pilih makanan dulu!</a>
+          </div>
+        </div>
+
+        <div class="cart-footer">
+          <div class="total-row">
+            <span>Total pembayaran</span>
+            <strong id="cart-total">Rp0</strong>
+          </div>
+          <button class="btn-primary checkout" onclick="checkout()">
+            Pesan Sekarang via WhatsApp 💬
+          </button>
+          <small>Pesanan akan dikirim langsung ke WhatsApp kami.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontak">
+      <span class="eyebrow">KAMI SIAP MELAYANI</span>
+      <h2>Mau pesan sesuatu? 💚</h2>
+      <p>Hubungi Dapoer Mama Arsy dan pesan makanan favoritmu sekarang!</p>
+      <a class="btn-whatsapp" href="https://wa.me/6285121592742" target="_blank">
+        💬 Chat WhatsApp Sekarang
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">🍲 Dapoer Mama Arsy</div>
+    <p>Terima kasih telah menjadi bagian dari perjalanan usaha kecil kami. ❤️</p>
+    <p class="copyright">© 2026 Dapoer Mama Arsy. Made with love.</p>
+  </footer>
+
+  <a href="https://wa.me/6285121592742" target="_blank" class="floating-wa" aria-label="Chat WhatsApp">
+    💬
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
